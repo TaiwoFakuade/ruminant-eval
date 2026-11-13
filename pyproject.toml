@@ -8,9 +8,12 @@ version = "1.0.0"
 description = "AI evaluation for ruminant nutrition science — golden references, dangerous-advice detection, numeric scoring, and feed-trial ANOVA"
 requires-python = ">=3.12"
 dependencies = [
-    "pandas",
-    "numpy",
-    "scipy",
+    # NumPy 2 floor: pyarrow (Streamlit charts/dataframes) requires
+    # NumPy >= 2.0. pandas 2.2 and scipy 1.14 are the earliest
+    # releases with NumPy 2 support.
+    "pandas>=2.2",
+    "numpy>=2.0",
+    "scipy>=1.14",
     "matplotlib",
     "streamlit",
 ]
