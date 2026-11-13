@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo

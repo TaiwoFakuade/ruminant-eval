@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ruminant-eval"
+version = "1.0.0"
+description = "AI evaluation for ruminant nutrition science — golden references, dangerous-advice detection, numeric scoring, and feed-trial ANOVA"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "streamlit",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+# The package is imported as `src.ruminant_eval` (tests, app.py and
+# the evaluator all use that path), so install the `src` package
+# itself rather than remapping it to a top-level `ruminant_eval`.
+[tool.setuptools]
+packages = ["src", "src.ruminant_eval"]
